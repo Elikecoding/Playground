@@ -1,3 +1,104 @@
+<header id="header">
+  <nav id="nav">
+      <h1>Welcome to the Tech Store</h1>
+      <ul>
+          <li><a href="/Index.html">Home</a></li>
+          <li><a href="/Shop.html">Shop</a></li>
+          <li><a href="/About.html">About</a></li>
+          <li><a href="/Contact.html">Contact</a></li>
+      </ul>   
+  </nav>
+  <input type="search" name="search" id="searchBox" placeholder="Search..">
+</header>
+
 <div id="contactPage">
-<p>Contact us </p>
+
+  <p>Contact us </p>
+
+<form action="" method="">
+  <div>
+  <label for="name">Name:</label><input type="text" placeholder="Enter your name..." id="name" name="name">
+  </div>
+  <div>
+  <label for="email">Email:</label><input type="email" placeholder="Enter your email" id="email" name="email">
+  </div>
+  <div>
+  <label for="message">Message:</label><textarea placeholder="Leave us a message" cols="30" rows="10" id="message" name="message"></textarea>
+  </div>
+  <!-- <div>
+    <label for="subject">Subjeact:</label>
+    <select name="subject" id="subject">
+      <optgroup label="Product issues">
+        <option value="returns">Returns</option>
+        <option value="faulty_item">Faulty item(s)</option>
+      </optgroup>
+      <optgroup label="Delivery">
+        <option value="delivery">Delivery info</option>
+        <option value="order_tracking">Tracking my order</option>
+      </optgroup>
+      <optgroup label="Other">
+        <option value="advice">Advice</option>
+        <option value="other">Other</option>
+      </optgroup>
+    </select>
+  </div> -->
+  <div>
+    <label for="subject">Subjeact:</label>
+    <input type="text" name="subject" id="subject" list="subjects" placeholder="Enter your subject">
+    <datalist id="subjects">
+        <option value="returns">Returns</option>
+        <option value="faulty_item">Faulty item(s)</option>
+        <option value="delivery">Delivery info</option>
+        <option value="order_tracking">Tracking my order</option>
+      <optgroup label="Other">
+        <option value="advice">Advice</option>
+        <option value="other">Other</option>
+    </datalist>
+  </div>
+  <div>
+    <p>Subscribe for future offers by:</p>
+
+    <label for="newsletter">Newsletter</label>
+    <input type="checkbox" name="subscribe" id="newsletter" value="newsletter">
+
+    <label for="email">Email</label>
+    <input type="checkbox" name="subscribe" id="email" value="email">
+
+    <label for="post">Post</label>
+    <input type="checkbox" name="subscribe" id="post" value="post">
+  </div>
+
+  <div>
+    <p>How would you like us to respond ?</p>
+
+    <label for="emailResponse">Email</label>
+    <input type="radio" name="response" id="emailResponse" value="email">
+
+    <label for="phoneResponse">Phone</label>
+    <input type="radio" name="response" id="phoneResponse" value="phone">
+  </div>
+  <input type="submit">
+  <input type="reset" value="">
+</form>
+
+<!-- <iframe src="" frameborder="5" height="800" width="800">
+  <p>Your browser does not support iframes</p>
+</iframe> -->
+
+<iframe 
+  width="600" 
+  height="450" 
+  style="border: 1px;" 
+  loading="lazy" 
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ03GSCloDdkgRe_s-p2vyvQA&key=AIzaSyB-qyXWtwHS2jCejup0_arPX6U41tpS47I">
+</iframe>
+
 </div>
+
+
+<footer>
+  <a href="/Index.html">
+      <p>Back to Home</p>
+  </a>
+</footer>
