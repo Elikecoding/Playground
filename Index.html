@@ -3,27 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Tech Store</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Scripts/style.css">
 </head>
 
 <body>
-<div id="body">
     <header id="header">
         <nav id="nav">
-            <h1>Welcome to the Tech Store</h1>
+            <h1>TechStore</h1>
             <ul>
                 <li><a href="/Index.html">Home</a></li>
                 <li><a href="/Shop.html">Shop</a></li>
                 <li><a href="/About.html">About</a></li>
                 <li><a href="/Contact.html">Contact</a></li>
+                <input type="search" name="search" id="searchBox" placeholder="Search..">
             </ul>   
         </nav>
-        <input type="search" name="search" id="searchBox" placeholder="Search..">
     </header>
 
         <aside id="filter">
             <h2>Shop by:</h2>
             <section id="catList">
-            <hr>
                 <h3>Category</h3>
                 <ul>
                     <li>All Items</li>
@@ -33,11 +34,9 @@
                     <li>Accessories</li>
                     <li>Other</li>
                 </ul>
-            <hr>
             </section>    
             
             <section id="priceList">
-            <hr>
                 <h3>Price <span>(£)</span></h3>
                 <ul>
                     <li>1-9</li>
@@ -46,16 +45,12 @@
                     <li>60-99</li>
                     <li>100+</li>
                 </ul>    
-            <hr>
             </section>
         </aside>
 
         <main id="items">
-            <table>
-            <th><h2>All Items: </h2></th>
-            <tr><td><section id="ps4">
-            <hr>
-                <div id="ps4">
+            <h2>All Items: </h2>
+                <div class="product" id="ps4">
                     <a href="ProductModels/Gamecontroller.html">
                     <img src="https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     alt="Black controller" transform="rotate(90deg)" height="550" width="550">
@@ -63,112 +58,82 @@
                     <h3><a href="ProductModels/Gamecontroller.html">Games Controller</a> &#127918;</h3>
                     <p>£79.99</p>
                     <p>A <strong>nice</strong> controller to use with all your games</p>
-                    <a href="ProductModels/Gamecontroller.html">More Info</a>
-                    <a href="">Add to cart</a>
+                    <a class="btn" href="ProductModels/Gamecontroller.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
                 </div>
-            <hr>
-            </section></td></tr>
 
-            <tr><td><section id="laptop">
-                <hr>
-                    <div id="laptop">
-                        <a href="ProductModels/Laptop.html">
-                        <img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                        alt="laptop" height="550" width="800">
-                        </a>
-                        <h3><a href="ProductModels/Laptop.html">Laptop</a> &#128187;</h3>
-                        <p>£350.99</p>
-                        <p>A <strong>nice</strong> Laptop for all your computer things</p>
-                        <a href="ProductModels/Laptop.html">More Info</a>
-                        <a href="">Add to cart</a>
-                    </div>
-                <hr>
-                </section></td></tr>
+                <div class="product" id="laptop">
+                    <a href="ProductModels/Laptop.html">
+                    <img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="laptop" height="550" width="800">
+                    </a>
+                    <h3><a href="ProductModels/Laptop.html">Laptop</a> &#128187;</h3>
+                    <p>£350.99</p>
+                    <p>A <strong>nice</strong> Laptop for all your computer things</p>
+                    <a class="btn" href="ProductModels/Laptop.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
 
-                <tr><td><section id="headphones">
-                    <hr>
-                        <div id="headphones">
-                            <a href="ProductModels/Headphones.html">
-                            <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="headphones" height="550" width="550">
-                            </a>
-                            <h3><a href="ProductModels/Headphones.html">Headphones</a> &#127911;</h3>
-                            <p>£45.99</p>
-                            <p>A <strong>nice</strong> set of headphones</p>
-                            <a href="ProductModels/Headphones.html">More Info</a>
-                            <a href="">Add to cart</a>
-                        </div>
-                    <hr>
-                    </section></td></tr>
+                <div class="product" id="headphones">
+                    <a href="ProductModels/Headphones.html">
+                    <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="headphones" height="550" width="550">
+                    </a>
+                    <h3><a href="ProductModels/Headphones.html">Headphones</a> &#127911;</h3>
+                    <p>£45.99</p>
+                    <p>A <strong>nice</strong> set of headphones</p>
+                    <a class="btn" href="ProductModels/Headphones.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
 
-                    <tr><td><section id="microphone">
+                <div class="product" id="microphone">
+                    <a href="ProductModels/Microphone.html">
+                    <img src="https://images.pexels.com/photos/5179401/pexels-photo-5179401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="microphone" height="550" width="550">
+                    </a>
+                    <h3><a href="ProductModels/Microphone.html">Microphone</a> &#127908;</h3>
+                    <p>£28.99</p>
+                    <p>A <strong>nice</strong> microphone for all your recording activities</p>
+                    <a class="btn" href="ProductModels/Microphone.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
 
-                        <hr>
-                            <div id="microphone">
-                                <a href="ProductModels/Microphone.html">
-                                <img src="https://images.pexels.com/photos/5179401/pexels-photo-5179401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                alt="microphone" height="550" width="550">
-                                </a>
-                                <h3><a href="ProductModels/Microphone.html">Microphone</a> &#127908;</h3>
-                                <p>£28.99</p>
-                                <p>A <strong>nice</strong> microphone for all your recording activities</p>
-                                <a href="ProductModels/Microphone.html">More Info</a>
-                                <a href="">Add to cart</a>
-                            </div>
-                        <hr>
-                        </section></td></tr>
+                <div class="product" id="cables">
+                    <a href="ProductModels/Cables.html">
+                    <img src="https://images.pexels.com/photos/4219862/pexels-photo-4219862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="cables" height="550" width="550">
+                    </a>
+                    <h3><a href="ProductModels/Cables.html">Cables</a> &#128268;</h3>
+                    <p>£18.99</p>
+                    <p>A <strong>nice</strong> set of cables</p>
+                    <a class="btn" href="ProductModels/Cables.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
 
-                        <tr><td><section id="cables">
-                            <hr>
-                                <div id="cables">
-                                    <a href="ProductModels/Cables.html">
-                                    <img src="https://images.pexels.com/photos/4219862/pexels-photo-4219862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="cables" height="550" width="550">
-                                    </a>
-                                    <h3><a href="ProductModels/Cables.html">Cables</a> &#128268;</h3>
-                                    <p>£18.99</p>
-                                    <p>A <strong>nice</strong> set of cables</p>
-                                    <a href="ProductModels/Cables.html">More Info</a>
-                                    <a href="">Add to cart</a>
-                                </div>
-                            <hr>
-                            </section></td></tr>
-                
-                <tr><td><section id="camera">
-                    <hr>
-                        <div id="camera">
-                            <a href="ProductModels/Gamecontroller.html">
-                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="camera" height="550" width="550">
-                            </a>
-                            <h3><a href="ProductModels/Camera.html">Camera</a> &#128247;</h3>
-                            <p>£59.99</p>
-                            <p>A <strong>nice</strong> camera to take photos</p>
-                            <a href="ProductModels/Camera.html">More Info</a>
-                            <a href="">Add to cart</a>
-                        </div>
-                    <hr>
-                    </section></td></tr>
+                <div class="product" id="camera">
+                    <a href="ProductModels/Camera.html">
+                    <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="camera" height="550" width="550">
+                    </a>
+                    <h3><a href="ProductModels/Camera.html">Camera</a> &#128247;</h3>
+                    <p>£59.99</p>
+                    <p>A <strong>nice</strong> camera to take photos</p>
+                    <a class="btn" href="ProductModels/Camera.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
 
-                    <tr><td><section id="cameraLenses">
-                        <hr>
-                            <div id="cameraLenses">
-                                <a href="ProductModels/CameraLenses.html">
-                                <img src="https://images.pexels.com/photos/3966322/pexels-photo-3966322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                alt="CameraLenses" height="550" width="550">
-                                </a>
-                                <h3><a href="ProductModels/CameraLenses.html">Camera Lenses</a> &#128247;</h3>
-                                <p>£34.99</p>
-                                <p>A <strong>nice</strong> set of lenses for your camera</p>
-                                <a href="ProductModels/CameraLenses.html">More Info</a>
-                                <a href="">Add to cart</a>
-                            </div>
-                        <hr>
-                        </section></td></tr>
-            </table>
+                <div class="product" id="cameraLenses">
+                    <a href="ProductModels/CameraLenses.html">
+                    <img src="https://images.pexels.com/photos/3966322/pexels-photo-3966322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="CameraLenses" height="550" width="550">
+                    </a>
+                    <h3><a href="ProductModels/CameraLenses.html">Camera Lenses</a> &#128247;</h3>
+                    <p>£34.99</p>
+                    <p>A <strong>nice</strong> set of lenses for your camera</p>
+                    <a class="btn" href="ProductModels/CameraLenses.html">More Info</a>
+                    <a class="btn" href="">Add to cart</a>
+                </div>
         </main>
-
-</div>
 </body>
 
 <footer id="footer">

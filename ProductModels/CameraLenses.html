@@ -1,48 +1,60 @@
-<header id="header">
-    <nav id="nav">
-        <h1>Welcome to the Tech Store</h1>
-        <ul>
-            <li><a href="/Index.html">Home</a></li>
-            <li><a href="/Shop.html">Shop</a></li>
-            <li><a href="/About.html">About</a></li>
-            <li><a href="/Contact.html">Contact</a></li>
-        </ul>   
-    </nav>
-    <input type="search" name="search" id="searchBox" placeholder="Search..">
-</header>
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tech Store</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/Scripts/style.css">
+    </head>
+    <body>
+    <header id="header">
+        <nav id="nav">
+            <h1>TechStore</h1>
+            <ul>
+                <li><a href="/Index.html">Home</a></li>
+                <li><a href="/Shop.html">Shop</a></li>
+                <li><a href="/About.html">About</a></li>
+                <li><a href="/Contact.html">Contact</a></li>
+                <input type="search" name="search" id="searchBox" placeholder="Search..">
+            </ul>   
+        </nav>
+    </header>
 
-<div id="cameraLenses">
-  <h1>Camera Lenses</h1>
-      <div class="cameraLenses">
-      <img src="https://images.pexels.com/photos/3966322/pexels-photo-3966322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      alt="cameraLenses" height="600" width="600">
+<body>
+    <div class="prodDetail" id="cameraLenses">
+        <h1>Camera Lenses</h1>
+            <div class="cameraLenses">
+            <img src="https://images.pexels.com/photos/3966322/pexels-photo-3966322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="cameraLenses" height="600" width="600">
+            </div>
+      
+        <p>These are some lenses.</p>
+      
+      <table id="prodTable">
+          <caption>Buy in bulk and save !</caption>
+          <thead>
+          <tr>
+              <th colspan="2">Quantity</th>
+              <td>1</td>
+              <td>2-4</td>
+              <td>5-10</td>
+              <td>+10</td>
+          </tr></thead>
+          <tbody><tr>
+              <th colspan="2">Price</th>
+              <td>£34.99</td>
+              <td>£32.99</td>
+              <td>£30.00</td>
+              <td>£28.99</td>
+          </tr></tbody>
+      </table>
+      
       </div>
-
-  <p>These are some lenses.</p>
-
-<table id="prodTable">
-    <caption>Buy in bulk and save !</caption>
-    <thead>
-    <tr>
-        <th colspan="2">Quantity</th>
-        <td>1</td>
-        <td>2-4</td>
-        <td>5-10</td>
-        <td>+10</td>
-    </tr></thead>
-    <tbody><tr>
-        <th colspan="2">Price</th>
-        <td>£34.99</td>
-        <td>£32.99</td>
-        <td>£30.00</td>
-        <td>£28.99</td>
-    </tr></tbody>
-</table>
-
-</div>
+</body>
 
 <footer>
     <a href="/Index.html">
         <p>Back to Home</p>
     </a>
 </footer>
+</html>

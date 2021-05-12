@@ -1,0 +1,127 @@
+html {
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body {
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 0px;
+  padding-right: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+main {
+  width: 680px;
+  display: inline-block;
+  padding: 10px;
+}
+
+aside {
+  width: 270px;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px;
+  padding: 10px;
+}
+
+/* p:first-of-type {
+  color: #e89f7e;
+} */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #1c92d2;
+}
+
+ul {
+  border: 0x;
+  padding: 5px;
+}
+
+li {
+  padding: 5px;
+  list-style: none;
+  line-height: 30px;
+}
+
+header h1 nav {
+  display: inline-block;
+}
+
+header li {
+  font-family: "Orbitron", sans-serif;
+  display: inline-block;
+}
+
+header ul {
+  border: 0px;
+  padding: 0px;
+}
+
+.product {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+
+  background: #ffeeee; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ddefbb,
+    #ffeeee
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ddefbb,
+    #ffeeee
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+header,
+footer {
+  background: #6dd5ed;
+  color: wheat;
+  padding: 0px;
+  border: 0;
+}
+
+.btn {
+  padding: 10px;
+  display: inline-block;
+}
+
+.btn:last-of-type {
+  background-color: #6dd5ed;
+  color: white;
+}
