@@ -39,6 +39,7 @@ main {
 
 aside {
   width: 270px;
+  position: sticky;
   display: inline-block;
   vertical-align: top;
   border: 5px;
@@ -89,6 +90,7 @@ header ul {
   padding: 10px;
   margin: 5px;
   display: inline-block;
+  text-align: center;
 
   background: #ffeeee; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -103,6 +105,16 @@ header ul {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.prodDetail {
+  width: 660px;
+}
+
+.prodDetail img {
+  max-width: 50%;
+  float: left;
+  overflow: auto;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -112,7 +124,7 @@ header,
 footer {
   background: #6dd5ed;
   color: wheat;
-  padding: 0px;
+  padding: 20px 10px;
   border: 0;
 }
 
@@ -124,4 +136,49 @@ footer {
 .btn:last-of-type {
   background-color: #6dd5ed;
   color: white;
+}
+
+/* Contact Us Styling */
+form {
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
+}
+
+form > div {
+  margin: 10px 0;
+}
+
+.inline label {
+  display: inline-block;
+  width: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  width: 400px;
+}
+
+/* Table */
+table {
+  width: 400px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+caption {
+  font-weight: bold;
+  font-style: italic;
+  border-bottom: 1px dotted;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tr:hover {
+  background: #1c92d2;
 }
