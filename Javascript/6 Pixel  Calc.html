@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Calc</title>
+</head>
+<body>
+  <div>
+  <label for="parent"> Parent Size(px)</label><br>
+  <input type="number" id="parent"><br>
+  <label for="required">Required Size (px)</label><br>
+  <input type="number"id="required"><br>
+  <button>Convert &#10227;</button>
+  </div>
+
+  <div>
+    <p>Resut: <span id="result">0</span>em</p>
+  </div>
+
+  <script>
+    var calc = () => { 
+      var parentVal = document.getElementById('parent').value;
+      var reqVal = document.getElementById('required').value;
+      var result = document.getElementById('result');
+      if (!parentVal | !reqVal) {
+        alert('Your fields are empty !');
+      }
+      else{
+        result.innerHTML = reqVal / parentVal;
+      }
+    }
+
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', calc);
+  </script>
+</body>
+</html>

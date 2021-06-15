@@ -1,0 +1,22 @@
+/*
+Selector                                   Points     
+element selector e.g h1, p        -        1
+class, att,psuedo e,g .myclass    -        10
+id e.g #myid                      -        100  
+inline                            -        1000 */
+
+html {
+}
+main {
+  background: white;
+  display: flexbox;
+  flex-flow: column wrap;
+  text-align: center;
+}
+#playSection {
+  background: skyblue;
+}
+#playBtn,
+#matchBtn {
+  background: blue;
+}

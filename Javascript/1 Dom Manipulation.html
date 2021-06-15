@@ -9,7 +9,9 @@
   
 <p>Hello <span id="userName">user</span></p>
 <p class="hello">Welcome back</p>
+<p>change me  to purple!</p>
 
+<img>
 
 <script>
 
@@ -23,7 +25,10 @@ var byClass = document.getElementsByClassName('hello')[0].style.color = 'blue';
 console.log(byClass);
 
 //Get element by Tag name
-document.getElementsByTagName
+document.getElementsByTagName('p')[2].style.color = 'purple';
+
+//query selector
+document.querySelector('img').setAttribute('src', 'https://i.pinimg.com/originals/f1/62/7d/f1627de2776ee4205f2e63082269a519.gif')
 
 </script>
 

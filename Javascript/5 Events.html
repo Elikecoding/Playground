@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+
+
+  <p id="mytext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam obcaecati, quam velit distinctio blanditiis repudiandae exercitationem facere laborum, doloremque qui rem earum quae recusandae officia quasi id. Doloremque, architecto voluptatibus.</p>
+
+  <script>
+    var getText = document.querySelector('p');
+    var changeFontSize = (e) => {
+      console.log(e);
+      document.getElementById('mytext').style.fontSize = '34px';
+    };
+    getText.addEventListener('click', changeFontSize);
+  </script>
+</body>
+</html>

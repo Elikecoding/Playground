@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+</head>
+<body>
+  
+  <ul id="chars"></ul>
+
+  <script>
+    // Loops - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+    let chars = ['Rogger Rabbit', 'Jessica Rabbit', 'Daffy Duck', 'Bugs Bunny'];
+    let items = '';
+
+    for (let i = 0; i < chars.length; i++) {
+      items += '<li>' + chars[i] + '</li>';
+    }
+
+    document.getElementById('chars').innerHTML = items;
+  </script>
+</body>
+</html>

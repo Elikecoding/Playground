@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding and removing elements
+    
+  </title>
+</head>
+<body>
+  
+<ul id="list">
+  <li>apples</li>
+  <li>pears</li>
+</ul>
+
+<script>
+  //Adding string to page, for test purposes only, overwrite all existing content
+  // document.write('Heres my text');
+  
+  //Creating elements
+  var node = document.createElement('LI');
+  //creating the text node 
+  var textNode = document.createTextNode('Strawberry');
+  var newTextNode = document.createTextNode('Grapes');
+  //add my item to my list 
+  node.appendChild(textNode);
+  node.appendChild(newTextNode);
+  console.log(textNode);
+  //select parent list
+  document.getElementById('list').appendChild(node);
+
+  //replace and revome items
+  var itemToReplace = document.querySelectorAll('li')[1];
+  textNode.replaceChild(newTextNode, itemToReplace);  
+</script>
+</body>
+</html>

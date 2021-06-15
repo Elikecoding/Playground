@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions & Arguments</title>
+</head>
+<body>
+  <p id="text"></p>
+  <p id="text2"></p>
+
+  <script>
+    function Hi(name){
+      alert('Hey you have a problem !!');
+
+      document.getElementById('text').innerHTML = `Hello ${name}`;
+    };
+    Hi('Elias');
+
+    var myCalcAdd = function (num1, num2){
+      document.getElementById('text2').innerHTML = num1+num2;
+    }
+    myCalcAdd(5,5);
+  </script>
+</body>
+</html>

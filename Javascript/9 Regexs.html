@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex's</title>
+  <style>
+    p{
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <div>
+      <label for="find">find</label>
+      <input type="text" id="find">
+    </div>
+    <div>
+      <label for="replace">replace</label>
+      <input type="text" id="replace">
+    </div>
+
+    <button type="button" id="replaceBtn">Replace</button>
+  </form>
+
+  <h3>Original Text</h3>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deserunt obcaecati sequi, beatae odit rerum ad distinctio fugit rem excepturi tempora eaque voluptatum illo, delectus neque quidem, et eveniet? Dolore.
+  Consequuntur fugiat recusandae dolores neque ea architecto quaerat eius! Libero, aliquid? Error deleniti tempore corrupti odit reprehenderit exercitationem ex, suscipit consequatur facilis eaque iste incidunt? Magnam deleniti nam non vero?
+  Sit modi hic voluptatem veritatis at explicabo atque perferendis esse itaque reprehenderit expedita, culpa harum laudantium ipsa quos in distinctio earum eius exercitationem? Eveniet sequi, molestiae officia adipisci eum vel!</p>
+
+  <h3>New Text</h3>
+
+  <p></p>
+
+  <script>
+    document.getElementById('replaceBtn').addEventListener('click', ()=>{
+      let originalTxt = document.querySelectorAll('p')[0];
+      let modTxt = document.querySelectorAll('p')[1];
+
+      let findTxt = document.getElementById('find').value;
+      let replaceTxt = document.getElementById('replace').value;
+
+      let myRgx = new RegExp(findTxt, 'i');
+      let newTxt = originalTxt.innerHTML.replace(myRgx, replaceTxt);  
+      modTxt.innerHTML = newTxt;
+    })
+
+    // let text = document.querySelector('p').innerHTML;
+
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+
+    //Search for a specific string
+    //let searchterm = text.search('elit');
+
+    //Replace text with a string(case sensitive)
+    // let searchTerm = text.replace('Lorem', 'Pondu');
+    
+    //replace text with regex(not case sensitive) - i modifier replaces first match 
+    // let searchTerm = text.replace(/lorem/i, 'Pondu');
+
+    //g modifier replaces all matches
+    // let searchTerm = text.replace(/e/g, 'Pondu');
+
+    //use square brackets to find any letter inside - first match
+    // let searchTerm = text.replace(/[co]/, '**Dragonballl**');
+
+    //Search via number
+    // let searchTerm = text.replace(/[3-6]/, '**Dragonballl**');
+    
+    // console.log(searchTerm);
+  </script>
+</body>
+</html>
