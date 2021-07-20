@@ -1,5 +1,13 @@
 extends layout
 
+include mixins/_hotel
+
 block content
-  h1= title
-  p Welcome to #{title}
+
+  .outer_wrapper
+    .hotel_wrapper 
+      .hotel
+        h2 Hotels
+          a(href="/all") (see all)
+        +hotel 
+
