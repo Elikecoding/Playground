@@ -1,3 +1,89 @@
-body{
-  
+/* 
+
+order: 
+
+*
+inline
+#id
+.class
+element
+element, element
+element element
+element > element
+element + element
+
+*/
+
+body {
+  text-align: center;
+  /* background-image: url("https://i2-prod.walesonline.co.uk/incoming/article20715699.ece/ALTERNATES/s1200c/2_Precious_Pets_2-1.jpg"); */
+  background-size: cover;
+  margin: 0px;
+}
+
+header {
+  border: 5px solid #04ca11;
+}
+
+body > main {
+  border: 5px solid #ffcc05;
+  padding: 5%;
+}
+
+.landingPage {
+  background-image: url("https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  padding: 5%;
+  margin: 0%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.landingPage > .container > img {
+  float: left;
+  overflow: auto;
+}
+
+body > main > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body > main > .container > img {
+  width: 450px;
+  height: 300px;
+  padding: 1%;
+  margin: 1%;
+  transition: all 1s;
+}
+
+body > main > .container > img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  border: 5px solid #311ab3;
+}
+
+h2 {
+  color: tomato;
+}
+
+p {
+  color: tomato;
+  line-height: 20px;
+  font-family: "Encode Sans SC", sans-serif;
+  /* font-style: italic; */
+  /* font-weight: bold; */
+}
+
+li {
+  display: inline-block;
+}
+
+a:hover {
+  color: black;
 }

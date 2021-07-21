@@ -1,2 +1,1 @@
-document.addEventListener('click', alert('hello world!'));
-
+// document.addEventListener('click',alert('Elieze is a ...'));
