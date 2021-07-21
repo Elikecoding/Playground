@@ -40,8 +40,14 @@ body > main {
 }
 
 .landingPage > .container > img {
-  float: left;
-  overflow: auto;
+}
+
+.landingPage > .container > .btn-dark {
+  transition: all 1s;
+}
+
+.landingPage > .container > .btn-dark:hover {
+  transform: scale(1.1);
 }
 
 body > main > .container {
