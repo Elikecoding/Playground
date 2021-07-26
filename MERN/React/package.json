@@ -1,0 +1,11 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "\"my first react app\"",
+  "main": "scripts.js",
+  "scripts": {
+    "build": "browserify scripts.js > bundle.js && live-server"
+  },
+  "author": "Elikecoding",
+  "license": "ISC"
+}
