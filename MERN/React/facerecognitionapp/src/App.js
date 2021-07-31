@@ -2,6 +2,8 @@ import { Component } from 'react';
 import './App.css';
 import Particles from "react-tsparticles";
 import Nav from './components/Nav/Nav.js';
+import SignIn from './components/SignIn/SignIn';
+import Register from './components/Register/Register';
 import Logo from './components/Logo/Logo.js';
 import ImgIptForm from './components/ImageIptForm/ImgIptForm.js';
 import Rank from './components/Rank/Rank.js';
@@ -94,7 +96,8 @@ class App extends Component {
       input: '',
       imageUrl: '',
       box: {},
-
+      route: 'signin',
+      isSignedIn: false
     }
   }
 
@@ -120,6 +123,8 @@ displayFacebox = (box) =>{
     this.setState({input: event.target.value});
   }
 
+
+  ////Bug is Heeree !!!!!! 
   onBtnSubmit =  () =>{
     this.setState({imageUrl: this.state.input});
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
@@ -134,19 +139,39 @@ displayFacebox = (box) =>{
     })
   }
 
+  onRouteChange = (route) =>{
+    if (route === 'signout') {
+      this.setState({isSignedIn: false})
+    }else if (route === 'home'){
+      this.setState({isSignedIn: true})
+    }
+    this.setState({route: route})
+  }
+
     render(){
+    const {isSignedIn,route,box,imageUrl} = this.state;
       return (
         <div className="App">
           <Particles
             className='particles'
             options={particleOpt}
           />
-          <Nav/>
+          <Nav isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
+          {route === 'home' 
+          ? 
+          <div>
           <Logo/>
           <Rank/>
           <ImgIptForm onIptChange={this.onIptChange} 
           onBtnSubmit={this.onBtnSubmit}/>
-          <FaceRec box={this.state.box} imageUrl={this.state.imageUrl}/>
+          <FaceRec box={box} imageUrl={imageUrl}/>
+          </div> :(
+            route === 'signin'
+            ?
+            <SignIn onRouteChange={this.onRouteChange}/>
+            :<Register onRouteChange={this.onRouteChange}/>
+          )
+        }
         </div>
       );
     }; 

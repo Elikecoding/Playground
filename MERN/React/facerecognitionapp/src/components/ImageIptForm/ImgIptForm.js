@@ -1,5 +1,5 @@
 import React from 'react';
-import './ImgIptForm.css'
+import './ImgIptForm.css';
 
 const ImgIptForm = ({onIptChange, onBtnSubmit}) =>{
   return(
