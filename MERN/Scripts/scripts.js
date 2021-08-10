@@ -24,8 +24,8 @@ var newsFeed = [
   }
 ];
 
-var userNamePrompt = prompt("What's you're user name ?");
-var passwordPrompt = prompt("What's your password ?");
+// var userNamePrompt = prompt("What's you're user name ?");
+// var passwordPrompt = prompt("What's your password ?");
 
 function userValid (username, password){
   for (let i = 0; i < database.length; i++) {
@@ -45,16 +45,16 @@ let signIn = (username, password) =>{
   }
 }
 
-signIn(userNamePrompt, passwordPrompt);
+//signIn(userNamePrompt, passwordPrompt);
 
 //adding event listener
 let myButton = document.getElementsByTagName('button')[0];
 
-// myButton.addEventListener('click', ()=>{
-//   console.log('button was pressed !');
-// });
+myButton.addEventListener('click', ()=>{
+  console.log('button was pressed !');
+});
 
-//adding items to a list
+//adding items to a shopping list
 let enterBtn = document.getElementById('enter');
 let myInput = document.getElementById('addShopping');
 let ul = document.querySelector('ul');
