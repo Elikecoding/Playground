@@ -1,54 +1,45 @@
-import React,{useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPhoneSquareAlt,faEnvelope,faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import {useForm} from 'react-hook-form';
+import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPhoneSquareAlt,faEnvelope,faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
 import './Contact.scss';
+require('dotenv').config()
 
 
 const Contact =()=>{
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [findType, setFindType] = useState('')
-  const [businessType, setBusinessType] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit =(e)=>{
-    e.preventDefault()
-    console.log('Sending')
-  }
-
-  let data = {
-    name,
-    email,
-    subject,
-    message,
-    findType,
-    businessType
-  }
-
-  fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(res =>{
-    console.log('Response received')
-    if (res.status === 200) {
-      console.log('Response succeeded!')
-      setSubmitted(true)
-      setName('')
-      setEmail('')
-      setSubject('')
-      setMessage('')
-      setFindType('')
-      setBusinessType('')
+  const { register, handleSubmit, reset ,formState: { errors } } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      findType: '',
+      businessType: '',
+      subject: '',
+      message: ''
     }
-  })
+  });
+
+  async function onFormSubmit (data){
+    let config = {
+      method: 'post',
+      url: `http://localhost:5000/submitForm`,
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      data: data,
+    }
+    try {
+      const response = await axios(config);
+      console.log(response);
+      if (response.status === 200) {
+        reset()
+        console.log('success');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   return(
     <div className='contactPg'>
@@ -77,34 +68,47 @@ const Contact =()=>{
             </div>
           </div>
         </div>
-        <form>
+        <form onSubmit={handleSubmit(onFormSubmit)}>
           <div className='col'>
             <div className='form-group'>
               <label>Name</label>
-              <input type='text' required onChange={(e)=>{setName(e.target.value)}}/>
-            </div>
-
-            <div className='form-group'>
-              <label>Email</label>
-              <input type='email' required onChange={(e)=>{setEmail(e.target.value)}}/>
+              <input type='text' name='name'
+              {...register('name', { required: true, pattern: /^[A-Za-z]+$/i })}/>
+              <span className='errors'>
+                {errors.name?.type === 'required' && "name is required"}
+                {errors.name?.type === 'pattern' && "name cannot contain special characters"}
+                </span>
             </div>
           </div>
 
+          <div className='col'>
+          <div className='form-group'>
+              <label>Email</label>
+              <input type='email' name='email' {...register('email', { required: true, minLength:7, maxLength: 300 })}/>
+              <span className='errors'>
+                {errors.email?.type === 'required' && "email is required"}
+                {errors.email?.type === 'minLength' && "email has to be at least 7 characters"}
+                {errors.email?.type === 'maxLength' && "email has to be at most 300 characters"}
+                </span>
+            </div>
+          </div>
           
           <div className='col'>
             <div className='form-group'>
               <label>How did you find us ?</label>
-              <select name="findMeth" id="findMeth" required onChange={(e)=>{setFindType(e.target.value)}}>
+              <select name="findMeth" id="findMeth" {...register('findType', { required: true })}>
                 <option value="linkedin">Linkedin</option>
                 <option value="google">Google</option>
                 <option value="word">Word of mouth</option>
                 <option value="other">Other</option>
               </select>
             </div>
+          </div>
 
-            <div className='form-group'>
+          <div className='col'>
+          <div className='form-group'>
               <label>What type of business are you ?</label>
-              <select name="businessType" id="businessType" required onChange={(e)=>{setBusinessType(e.target.value)}}>
+              <select name="businessType" id="businessType" {...register('businessType', { required: true })}>
                 <option value="agency">Agency</option>
                 <option value="company">Company</option>
                 <option value="individual">Individual</option>
@@ -116,18 +120,29 @@ const Contact =()=>{
           <div className='col'>
             <div className='form-group'>
               <label>Subject</label>
-              <input type='text' onChange={(e)=>{setSubject(e.target.value)}}/>
+              <input type='text' name='subject' {...register('subject', { required: true, maxLength:30 })}/>
+              <span className='errors'>
+                {errors.subject?.type === 'required' && "you must enter a subject"}
+                {errors.subject?.type === 'maxLength' && "subject has to be at most 30 characters"}
+                </span>
             </div>
+          </div>
 
-            <div className='form-group'>
+          <div className='col'>
+          <div className='form-group'>
               <label>Message</label>
-              <textarea name="message" form="contact-form" onChange={(e)=>{setMessage(e.target.value)}}>Enter text here...</textarea>
+              <textarea name="message" form="contact-form" {...register('message', { required: true, minLength: 20 ,maxLength:1500 })} placeholder='enter your text here...'></textarea>
+              <span className='errors'>
+                {errors.message?.type === 'required' && "you must enter a message"}
+                {errors.message?.type === 'minLength' && "message has to be at least 20 characters"}
+                {errors.message?.type === 'maxLength' && "message has to be at most 1500 characters"}
+              </span>
             </div>
           </div>
 
           <div className='col'>
             <div className='form-group'>
-              <input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
+              <input type='submit'/>
             </div>
           </div>
 
