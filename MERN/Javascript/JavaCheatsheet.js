@@ -299,4 +299,3 @@ postData('https://reqres.in/api/users', {
   console.log(data); // JSON data parsed by `data.json()` call
 })
 .catch(error => console.log('Opps something went wrong', error.message))
-
