@@ -1,0 +1,12 @@
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\bin\Debug\net5.0\OppLibrary.deps.json
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\bin\Debug\net5.0\OppLibrary.dll
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\bin\Debug\net5.0\ref\OppLibrary.dll
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\bin\Debug\net5.0\OppLibrary.pdb
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.csprojAssemblyReference.cache
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.AssemblyInfoInputs.cache
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.AssemblyInfo.cs
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.csproj.CoreCompileInputs.cache
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.dll
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\ref\OppLibrary.dll
+C:\Users\elike\Documents\Code\Playground\OOP\C#\OppLibrary\obj\Debug\net5.0\OppLibrary.pdb

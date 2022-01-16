@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "OOP/1.0.0": {
+        "dependencies": {
+          "OppLibrary": "1.0.0"
+        },
+        "runtime": {
+          "OOP.dll": {}
+        }
+      },
+      "OppLibrary/1.0.0": {
+        "runtime": {
+          "OppLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OOP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OppLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
